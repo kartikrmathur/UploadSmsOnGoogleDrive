@@ -95,7 +95,7 @@ public class GoogleDriveActivity extends AppCompatActivity {
                         .setFields("id")
                         .execute();
                 Log.d(TAG, "File ID: " + file.getId());
-                Intent intent = new Intent(GoogleDriveActivity.this, DownloadActivity.class);
+                Intent intent = new Intent(GoogleDriveActivity.this, MainActivity.class);
                 intent.putExtra("fileId", file.getId());
                 startActivity(intent);
             } catch (IOException e) {
